@@ -1,0 +1,26 @@
+/* Grid de tarjetas con los 3 rangos */
+.cards-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr; /* móvil por defecto: <=600px */
+}
+
+/* <=600px */
+@media (max-width: 600px) {
+  h1, h2 { line-height: 1.15; }
+  .lead { font-size: 1rem; }
+  main .btn-lg { padding: 0.65rem 1.1rem; font-size: 1rem; }
+}
+
+/* 601px–1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .cards-grid { grid-template-columns: repeat(2, 1fr); }
+  .lead { font-size: 1.05rem; }
+  section#features { padding-top: 3rem; padding-bottom: 3rem; }
+}
+
+/* >1024px */
+@media (min-width: 1025px) {
+  .cards-grid { grid-template-columns: repeat(3, 1fr); }
+  main .display-5 { font-size: 3rem; }
+}
