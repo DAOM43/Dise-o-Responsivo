@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer id="footer" className="py-4 border-top">
+    <footer id="footer" className="py-4 bg-dark text-light">
       <div className="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3">
         <p className="mb-0">© {new Date().getFullYear()} Mi Sitio</p>
         <ul className="nav gap-3">

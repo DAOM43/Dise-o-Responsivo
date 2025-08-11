@@ -19,7 +19,7 @@ export default function App() {
             </div>
             <div className="col-lg-6 text-center">
               {/* usamos el logo que ya está en /public */}
-              <img src="/vite.svg" className="img-fluid" alt="Logo" width={220} height={220} />
+              <img src="/Bootstrap_Logo.svg" className="img-fluid" alt="Logo" width={400} height={400} />
             </div>
           </div>
         </div>

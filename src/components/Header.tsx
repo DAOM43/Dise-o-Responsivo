@@ -1,10 +1,10 @@
 export default function Header() {
   return (
     <header className="border-bottom">
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg bg-primary navbar-dark">
         <div className="container">
           <a className="navbar-brand d-flex align-items-center gap-2" href="#">
-            <img src="/vite.svg" width={28} height={28} alt="Logo" />
+            <img src="/Bootstrap_Logo.svg" width={28} height={28} alt="Logo" />
             <span className="fw-semibold">Mi Sitio</span>
           </a>
 

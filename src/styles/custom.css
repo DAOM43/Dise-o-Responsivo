@@ -1,25 +1,94 @@
-/* Grid de tarjetas con los 3 rangos */
+/* ===========================
+   0) Variables y base
+   =========================== */
+:root {
+  /* ancho máximo original */
+  --container-max: 1140px;
+
+  /* Paleta Bootstrap (morado oficial) */
+  --bs-primary: #7952b3;
+  --bs-primary-rgb: 121, 82, 179;
+
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-danger: #dc3545;
+  --bs-warning: #ffc107;
+  --bs-info: #0dcaf0;
+  --bs-dark: #212529;
+  --bs-light: #f8f9fa;
+}
+
+.container { max-width: var(--container-max); }
+
+/* ===========================
+   1) Colores unificados
+   =========================== */
+/* Botón primario (ej. "Ver tarjetas") */
+.btn-primary {
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: #5e3ea1;
+  --bs-btn-hover-border-color: #5e3ea1;
+  --bs-btn-color: #fff;
+}
+
+/* Botón outline primario (ej. "Leer más") */
+.btn-outline-primary {
+  color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+.btn-outline-primary:hover {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: #fff;
+}
+
+/* Navbar morado con enlaces blancos */
+.navbar.navbar-dark .navbar-brand,
+.navbar.navbar-dark .nav-link {
+  color: #fff !important;
+}
+.navbar.navbar-dark .nav-link:hover {
+  color: #f8f9fa !important; /* un pelín más claro */
+  opacity: .85;
+}
+
+/* Enlaces del footer en morado */
+footer .nav-link,
+#footer .nav-link {
+  color: var(--bs-primary) !important;
+}
+footer .nav-link:hover,
+#footer .nav-link:hover {
+  color: #5e3ea1 !important;
+}
+
+/* ===========================
+   2) Layout responsivo original
+   =========================== */
+/* Grid de tarjetas con los 3 rangos solicitados */
 .cards-grid {
   display: grid;
   gap: 1.25rem;
-  grid-template-columns: 1fr; /* móvil por defecto: <=600px */
+  /* Por defecto móvil (<=600px) => 1 columna */
+  grid-template-columns: 1fr;
 }
 
-/* <=600px */
+/* Móviles: <=600px (legibilidad extra) */
 @media (max-width: 600px) {
   h1, h2 { line-height: 1.15; }
   .lead { font-size: 1rem; }
   main .btn-lg { padding: 0.65rem 1.1rem; font-size: 1rem; }
 }
 
-/* 601px–1024px */
+/* Tabletas: 601px–1024px => 2 columnas + espaciado */
 @media (min-width: 601px) and (max-width: 1024px) {
   .cards-grid { grid-template-columns: repeat(2, 1fr); }
   .lead { font-size: 1.05rem; }
   section#features { padding-top: 3rem; padding-bottom: 3rem; }
 }
 
-/* >1024px */
+/* Escritorio: >1024px => 3 columnas */
 @media (min-width: 1025px) {
   .cards-grid { grid-template-columns: repeat(3, 1fr); }
   main .display-5 { font-size: 3rem; }
