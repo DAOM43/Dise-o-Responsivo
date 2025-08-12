@@ -6,12 +6,12 @@ type CardItem = {
 };
 
 const items: CardItem[] = [
-  { id: 1, title: "Card 1", text: "Descripción breve del contenido.", img: "/src/assets/cards/p1.jpg" },
-  { id: 2, title: "Card 2", text: "Descripción breve del contenido.", img: "/src/assets/cards/p2.jpg" },
-  { id: 3, title: "Card 3", text: "Descripción breve del contenido.", img: "/src/assets/cards/p3.jpg" },
-  { id: 4, title: "Card 4", text: "Más contenido opcional.", img: "/src/assets/cards/p1.jpg" },
-  { id: 5, title: "Card 5", text: "Más contenido opcional.", img: "/src/assets/cards/p2.jpg" },
-  { id: 6, title: "Card 6", text: "Más contenido opcional.", img: "/src/assets/cards/p3.jpg" },
+  { id: 1, title: "Bootstrap", text: "Framework front-end que brinda componentes listos y un sistema de grid versátil para crear interfaces responsivas con rapidez.", img: "imagen1.jpeg" },
+  { id: 2, title: "Grid de Bootstrap", text: "El sistema de cuadrícula utiliza filas y columnas que se ajustan automáticamente al tamaño del dispositivo para una estructura flexible.", img: "imagen2.jpg" },
+  { id: 3, title: "Layout Responsivo", text: "Diseño que se adapta fluidamente a móviles, tabletas y escritorios, garantizando buena lectura y navegación en cualquier dispositivo.", img: "imagen3.jpeg" },
+  { id: 4, title: "Mobile First", text: "Estrategia de diseño que prioriza el desarrollo para dispositivos móviles y luego escala hacia pantallas más grandes.", img: "imagen4.jpeg" },
+  { id: 5, title: "Componentes UI listos", text: "Bootstrap ofrece botones, navbars, tarjetas y formularios personalizables que aceleran tu flujo de trabajo y garantizan coherencia visual.", img: "imagen5.jpg" },
+  { id: 6, title: "Optimización y Usabilidad", text: "Un sitio responsivo bien hecho carga más rápido, es más accesible y mejora la experiencia del usuario en todos los dispositivos.", img: "imagen6.jpg" },
 ];
 
 export default function CardsSection() {
@@ -20,10 +20,9 @@ export default function CardsSection() {
       {items.map((it) => (
         <article key={it.id} className="card shadow-sm h-100">
           <img src={it.img} className="card-img-top" alt={it.title} />
-          <div className="card-body d-flex flex-column">
+          <div className="card-body">
             <h5 className="card-title">{it.title}</h5>
-            <p className="card-text flex-grow-1">{it.text}</p>
-            <a href="#" className="btn btn-outline-primary">Leer más</a>
+            <p className="card-text">{it.text}</p>
           </div>
         </article>
       ))}
